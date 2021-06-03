@@ -156,3 +156,15 @@ def team_colors(name)
     end
   end
 end
+
+def player_numbers(name)
+  num_array = []
+  game_hash.each do |location, team_data|
+    if team_data[:team_name] == name
+      team_data[:players].each do |data_item|
+        num_array.push(data_item[:number])
+      end
+    end
+  end
+  num_array
+end
