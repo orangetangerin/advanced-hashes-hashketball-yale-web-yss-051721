@@ -166,5 +166,5 @@ def player_numbers(name)
       end
     end
   end
-  num_array
+  return num_array
 end
