@@ -186,3 +186,20 @@ def player_stats(name)
     end
   end
 end
+
+def big_shoe_rebounds
+  max_shoe = nil
+  rebounds = nil
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |data_item|
+      if max_shoe == nil
+        max_shoe = data_item[:shoe]
+        rebounds = data_item[:rebounds]
+      elsif max_shoe < data_item[:shoe]
+        max_shoe = data_item[:shoe]
+        rebounds = data_item[:rebounds]
+      end
+    end
+  end
+  rebounds
+end
