@@ -157,6 +157,14 @@ def team_colors(name)
   end
 end
 
+def team_names(names)
+  team_array = []
+  game_hash.each do |location, team_data|
+    team_array.push(team_data[team_name])
+  end
+  team_array
+end
+
 def player_numbers(name)
   num_array = []
   game_hash.each do |location, team_data|
