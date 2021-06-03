@@ -162,7 +162,7 @@ def team_names(names)
   game_hash.each do |location, team_data|
     team_array.push(team_data[team_name])
   end
-  team_array
+  return team_array
 end
 
 def player_numbers(name)
